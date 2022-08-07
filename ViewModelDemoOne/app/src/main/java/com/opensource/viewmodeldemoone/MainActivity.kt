@@ -1,6 +1,8 @@
 package com.opensource.viewmodeldemoone
 
+import android.content.Context
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -13,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val context: Context = this
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         countViewModel = ViewModelProvider(this).get(CountViewModel::class.java)
         binding.textView.setText(countViewModel.getCurrentCount().toString())
@@ -22,7 +25,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.addButton.setOnClickListener {
-            binding.textInputLayout.setText(countViewModel.getTotal(binding.inputEditText.text.toString().toInt()).toString())
+            if(binding.inputEditText.text.toString() == "")
+                Toast.makeText(context,"Enter a value", Toast.LENGTH_SHORT).show()
+            else {
+                binding.textInputLayout.setText(countViewModel.getTotal(binding.inputEditText.text.toString().toInt()).toString())
+            }
         }
     }
 }
