@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ViewModelDemoOneFactory</string>
+    <string name="count">Count</string>
+    <string name="defaultCountValue">0</string>
+    <string name="add">Add</string>
+    <string name="hintValue">Enter a number</string>
+</resources>
