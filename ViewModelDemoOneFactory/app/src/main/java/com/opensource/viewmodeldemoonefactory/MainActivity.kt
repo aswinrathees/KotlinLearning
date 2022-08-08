@@ -1,11 +1,10 @@
 package com.opensource.viewmodeldemoonefactory
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.opensource.viewmodeldemoone.viewmodel.AddViewModel
 import com.opensource.viewmodeldemoonefactory.databinding.ActivityMainBinding
