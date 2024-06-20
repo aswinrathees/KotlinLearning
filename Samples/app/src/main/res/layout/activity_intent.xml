@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.IntentActivity">
+
+        <TextView
+            android:id="@+id/tvCreateContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/create_contact"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivMood"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/mood"
+            android:src="@drawable/ic_mood"
+            app:layout_constraintBottom_toTopOf="@id/btnCreateContact"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/mood"
+            android:src="@drawable/ic_phone"
+            app:layout_constraintBottom_toTopOf="@id/btnCreateContact"
+            app:layout_constraintStart_toEndOf="@id/ivMood" />
+
+        <ImageView
+            android:id="@+id/ivWeb"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/mood"
+            android:src="@drawable/ic_browser"
+            app:layout_constraintBottom_toTopOf="@id/btnCreateContact"
+            app:layout_constraintEnd_toStartOf="@id/ivLocation" />
+
+        <ImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/mood"
+            android:src="@drawable/ic_location"
+            app:layout_constraintBottom_toTopOf="@id/btnCreateContact"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btnCreateContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/create"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

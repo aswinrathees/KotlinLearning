@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //Can use Dispatchers.IO as well...
+        // Can use Dispatchers.IO as well...
         // But in that case need to show in Tag as
         // Toast will not work since its in main thread.
         CoroutineScope(Dispatchers.Main).launch {
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             val stock2 = async { getStock2() }
 
             val total = stock1.await() + stock2.await()
-            Toast.makeText(applicationContext, "Total is ${total}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Total is $total", Toast.LENGTH_SHORT).show()
         }
     }
 
