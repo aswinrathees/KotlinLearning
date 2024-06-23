@@ -1,4 +1,4 @@
-package com.opensource.samples.activities
+package com.opensource.samples.activities.intents
 
 import android.content.Intent
 import android.net.Uri
@@ -9,7 +9,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.opensource.samples.R
-import com.opensource.samples.activities.intents.CreateContactActivity
 import com.opensource.samples.databinding.ActivityIntentBinding
 
 class IntentActivity : AppCompatActivity(), View.OnClickListener {
