@@ -8,7 +8,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.intents.IntentActivity">
+        tools:context=".activities.intentSamples.IntentActivity">
 
         <TextView
             android:id="@+id/tvCreateContact"

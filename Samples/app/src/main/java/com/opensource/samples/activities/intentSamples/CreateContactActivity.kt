@@ -1,4 +1,4 @@
-package com.opensource.samples.activities.intents
+package com.opensource.samples.activities.intentSamples
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import com.opensource.samples.MainActivity
 import com.opensource.samples.R

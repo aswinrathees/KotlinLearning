@@ -1,4 +1,4 @@
-package com.opensource.samples.activities.intents
+package com.opensource.samples.activities.intentSamples
 
 import android.content.Intent
 import android.net.Uri
