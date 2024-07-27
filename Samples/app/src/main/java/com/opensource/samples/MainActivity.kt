@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.opensource.samples.activities.fragmentSamples.FragmentActivity
 import com.opensource.samples.activities.intentSamples.IntentActivity
 import com.opensource.samples.databinding.ActivityMainBinding
 
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         binding.showIntentsSampleBtn.setOnClickListener {
             navigateToActivity(IntentActivity::class.java)
+        }
+
+        binding.showFragmentsSampleBtn.setOnClickListener {
+            navigateToActivity(FragmentActivity::class.java)
         }
     }
 

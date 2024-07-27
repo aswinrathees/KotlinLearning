@@ -7,7 +7,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:layout_margin="10dp"
-        android:id="@+id/layoutPortrait">
+        android:id="@+id/layoutLandscape">
 
         <Button
             android:id="@+id/showIntentsSampleBtn"

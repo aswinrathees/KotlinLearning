@@ -16,7 +16,7 @@
         android:theme="@style/Theme.samples"
         tools:targetApi="31">
         <activity
-            android:name=".activities.fragments.FragmentActivity"
+            android:name=".activities.fragmentSamples.FragmentActivity"
             android:exported="false" />
         <activity
             android:name=".activities.intentSamples.CreateContactActivity"
