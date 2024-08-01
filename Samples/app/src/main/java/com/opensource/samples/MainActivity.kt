@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.opensource.samples.activities.customizationSamples.CustomizationActivity
 import com.opensource.samples.activities.fragmentSamples.FragmentActivity
 import com.opensource.samples.activities.fragmentSamples.fragments.contacts.ContactActivity
 import com.opensource.samples.activities.intentSamples.IntentActivity
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.showContactsFragmentsSampleBtn?.setOnClickListener {
             navigateToActivity(ContactActivity::class.java)
+        }
+
+        binding.showCustomizationsSampleBtn?.setOnClickListener {
+            navigateToActivity(CustomizationActivity::class.java)
         }
     }
 

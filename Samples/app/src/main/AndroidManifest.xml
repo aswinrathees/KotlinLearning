@@ -16,6 +16,9 @@
         android:theme="@style/Theme.samples"
         tools:targetApi="31">
         <activity
+            android:name=".activities.customizationSamples.CustomizationActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.fragmentSamples.fragments.contacts.ContactActivity"
             android:exported="false" />
         <activity
