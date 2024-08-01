@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.opensource.samples.activities.fragmentSamples.FragmentActivity
+import com.opensource.samples.activities.fragmentSamples.fragments.contacts.ContactActivity
 import com.opensource.samples.activities.intentSamples.IntentActivity
 import com.opensource.samples.databinding.ActivityMainBinding
 
@@ -24,8 +25,12 @@ class MainActivity : AppCompatActivity() {
             navigateToActivity(IntentActivity::class.java)
         }
 
-        binding.showFragmentsSampleBtn.setOnClickListener {
+        binding.showAdaptiveViewFragmentsSampleBtn.setOnClickListener {
             navigateToActivity(FragmentActivity::class.java)
+        }
+
+        binding.showContactsFragmentsSampleBtn?.setOnClickListener {
+            navigateToActivity(ContactActivity::class.java)
         }
     }
 

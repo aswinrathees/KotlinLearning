@@ -15,7 +15,15 @@
     <string name="location">Location</string>
     <string name="mood_happy_icon">mood_happy_icon</string>
     <string name="mood_bad_icon">Mood Bad Icon</string>
-    <string name="fragments_text">Fragments</string>
+    <string name="fragments_text">Adaptive View With Fragments</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contacts_with_fragments">Contacts With Fragments</string>
+    <string name="contact_detail_image">Contact Detail Image</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_number">Enter Number</string>
+    <string name="submit">Add Contact</string>
+    <string name="contact_icon">Contact Icon</string>
 </resources>

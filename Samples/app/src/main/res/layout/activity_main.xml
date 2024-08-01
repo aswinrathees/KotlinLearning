@@ -16,10 +16,16 @@
             android:text="@string/intentsText" />
 
         <Button
-            android:id="@+id/showFragmentsSampleBtn"
+            android:id="@+id/showAdaptiveViewFragmentsSampleBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/fragments_text" />
+
+        <Button
+            android:id="@+id/showContactsFragmentsSampleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_with_fragments" />
 
     </LinearLayout>
 
