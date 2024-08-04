@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.opensource.samples.activities.customizationSamples.BasicCustomizationActivity
 import com.opensource.samples.activities.customizationSamples.CustomListViewActivity
+import com.opensource.samples.activities.customizationSamples.helpers.ViewUtilities
 import com.opensource.samples.activities.fragmentSamples.FragmentActivity
 import com.opensource.samples.activities.fragmentSamples.fragments.contacts.ContactActivity
 import com.opensource.samples.activities.intentSamples.IntentActivity
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.showCustomizationsSampleBtn.setOnClickListener {
+            ViewUtilities.showToast(this, "This is basic implementation")
             navigateToActivity(BasicCustomizationActivity::class.java)
         }
 
