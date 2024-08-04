@@ -9,14 +9,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.opensource.samples.R
 
-class CustomizationActivity : AppCompatActivity() {
+class BasicCustomizationActivity : AppCompatActivity() {
 
     lateinit var etFirstName: AutoCompleteTextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_customization)
+        setContentView(R.layout.activity_basic_customization)
         etFirstName = findViewById(R.id.etFirstName)
 
         val names: Array<String> = arrayOf("Aswin", "Rathees", "Mini")

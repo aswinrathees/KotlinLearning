@@ -16,7 +16,10 @@
         android:theme="@style/Theme.samples"
         tools:targetApi="31">
         <activity
-            android:name=".activities.customizationSamples.CustomizationActivity"
+            android:name=".activities.customizationSamples.CustomListViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.customizationSamples.BasicCustomizationActivity"
             android:exported="false" />
         <activity
             android:name=".activities.fragmentSamples.fragments.contacts.ContactActivity"

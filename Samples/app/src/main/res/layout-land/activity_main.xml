@@ -21,6 +21,25 @@
             android:layout_height="wrap_content"
             android:text="@string/fragments_text" />
 
+
+        <Button
+            android:id="@+id/showContactsFragmentsSampleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_with_fragments" />
+
+        <Button
+            android:id="@+id/showCustomizationsSampleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/basic_customizations" />
+
+        <Button
+            android:id="@+id/showCustomListViewSampleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_list_view" />
+
     </LinearLayout>
 
 </layout>

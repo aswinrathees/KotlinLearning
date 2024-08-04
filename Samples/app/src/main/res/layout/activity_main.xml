@@ -31,7 +31,13 @@
             android:id="@+id/showCustomizationsSampleBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/customizations" />
+            android:text="@string/basic_customizations" />
+
+        <Button
+            android:id="@+id/showCustomListViewSampleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_list_view" />
 
     </LinearLayout>
 
