@@ -37,4 +37,8 @@
     <string name="product_image">Product Image</string>
     <string name="product_description">Product Description</string>
     <string name="toast_icon">Toast Icon</string>
+    <string name="custom_action_bar">Custom Action Bar</string>
+    <string name="refresh">Refresh</string>
+    <string name="download">Download</string>
+    <string name="upload">Upload</string>
 </resources>

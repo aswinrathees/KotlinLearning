@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.opensource.samples.activities.customizationSamples.BasicCustomizationActivity
+import com.opensource.samples.activities.customizationSamples.CustomActionBarActivity
 import com.opensource.samples.activities.customizationSamples.CustomListViewActivity
 import com.opensource.samples.activities.customizationSamples.helpers.ViewUtilities
 import com.opensource.samples.activities.fragmentSamples.FragmentActivity
@@ -43,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.showCustomListViewSampleBtn.setOnClickListener {
             navigateToActivity(CustomListViewActivity::class.java)
+        }
+
+        binding.showCustomActionBarSampleBtn.setOnClickListener {
+            navigateToActivity(CustomActionBarActivity::class.java)
         }
     }
 
