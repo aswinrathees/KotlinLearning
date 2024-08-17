@@ -45,6 +45,12 @@
             android:layout_height="wrap_content"
             android:text="@string/custom_action_bar" />
 
+        <Button
+            android:id="@+id/showSQLiteSampleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sqlite" />
+
     </LinearLayout>
 
 </layout>

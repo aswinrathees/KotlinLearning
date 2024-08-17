@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activities.sqlite.SQLiteActivity">
+
+        <EditText
+            android:id="@+id/et_sqlite_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="@string/enter_name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_sqlite_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="phone"
+            android:hint="@string/enter_number"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_sqlite_submit_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_details" />
+
+        <Button
+            android:id="@+id/btn_sqlite_show_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show_details" />
+
+        <Button
+            android:id="@+id/btn_sqlite_update_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_details" />
+
+        <Button
+            android:id="@+id/btn_sqlite_delete_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_details" />
+
+    </LinearLayout>
+</layout>

@@ -11,6 +11,7 @@ import com.opensource.samples.activities.customizationSamples.helpers.ViewUtilit
 import com.opensource.samples.activities.fragmentSamples.FragmentActivity
 import com.opensource.samples.activities.fragmentSamples.fragments.contacts.ContactActivity
 import com.opensource.samples.activities.intentSamples.IntentActivity
+import com.opensource.samples.activities.sqlite.SQLiteActivity
 import com.opensource.samples.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -48,6 +49,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.showCustomActionBarSampleBtn.setOnClickListener {
             navigateToActivity(CustomActionBarActivity::class.java)
+        }
+
+        binding.showSQLiteSampleBtn.setOnClickListener {
+            navigateToActivity(SQLiteActivity::class.java)
         }
     }
 

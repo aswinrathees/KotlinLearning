@@ -16,11 +16,18 @@
         android:theme="@style/Theme.samples"
         tools:targetApi="31">
         <activity
+            android:name=".activities.sqlite.ViewSQLiteDataActivity"
+            android:exported="false"
+            android:theme="@style/Theme.samples" />
+        <activity
+            android:name=".activities.sqlite.SQLiteActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.customizationSamples.CustomActionBarActivity"
             android:exported="false">
-
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".activities.customizationSamples.CustomListViewActivity"
