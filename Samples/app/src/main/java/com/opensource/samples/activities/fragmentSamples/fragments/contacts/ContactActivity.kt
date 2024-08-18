@@ -10,7 +10,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.FragmentManager
 import com.opensource.samples.R
 import com.opensource.samples.activities.fragmentSamples.fragments.contacts.helpers.Person
 import com.opensource.samples.activities.fragmentSamples.fragments.contacts.helpers.PersonClicked
@@ -22,7 +21,6 @@ class ContactActivity : AppCompatActivity(), PersonClicked {
     private val contacts = ArrayList<Person>()
     private var btnAddContact: Button? = null
     private lateinit var listFragment: ContactListFragment
-    private lateinit var fragmentManager: FragmentManager
     private lateinit var etName: EditText
     private lateinit var etPhone: EditText
 

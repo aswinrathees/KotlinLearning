@@ -12,6 +12,7 @@ import com.opensource.samples.activities.fragmentSamples.FragmentActivity
 import com.opensource.samples.activities.fragmentSamples.fragments.contacts.ContactActivity
 import com.opensource.samples.activities.intentSamples.IntentActivity
 import com.opensource.samples.activities.permissions.PermissionsActivity
+import com.opensource.samples.activities.rssfeed.RssFeedActivity
 import com.opensource.samples.activities.sqlite.SQLiteActivity
 import com.opensource.samples.databinding.ActivityMainBinding
 
@@ -58,6 +59,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.showPermissionSampleBtn.setOnClickListener {
             navigateToActivity(PermissionsActivity::class.java)
+        }
+
+        binding.showRssFeedSampleBtn.setOnClickListener {
+            navigateToActivity(RssFeedActivity::class.java)
         }
     }
 

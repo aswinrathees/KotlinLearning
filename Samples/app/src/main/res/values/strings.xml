@@ -90,4 +90,5 @@
     </string>
     <string name="permissions">Permissions</string>
     <string name="checks_contacts_permission">Checks Contacts Permission</string>
+    <string name="rss_feed">RSS Feed</string>
 </resources>

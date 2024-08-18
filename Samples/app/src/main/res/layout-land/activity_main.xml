@@ -21,7 +21,6 @@
             android:layout_height="wrap_content"
             android:text="@string/fragments_text" />
 
-
         <Button
             android:id="@+id/showContactsFragmentsSampleBtn"
             android:layout_width="match_parent"
@@ -57,6 +56,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/permissions" />
+
+        <Button
+            android:id="@+id/showRssFeedSampleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rss_feed" />
 
     </LinearLayout>
 
