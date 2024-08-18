@@ -11,6 +11,7 @@ import com.opensource.samples.activities.customizationSamples.helpers.ViewUtilit
 import com.opensource.samples.activities.fragmentSamples.FragmentActivity
 import com.opensource.samples.activities.fragmentSamples.fragments.contacts.ContactActivity
 import com.opensource.samples.activities.intentSamples.IntentActivity
+import com.opensource.samples.activities.permissions.PermissionsActivity
 import com.opensource.samples.activities.sqlite.SQLiteActivity
 import com.opensource.samples.databinding.ActivityMainBinding
 
@@ -53,6 +54,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.showSQLiteSampleBtn.setOnClickListener {
             navigateToActivity(SQLiteActivity::class.java)
+        }
+
+        binding.showPermissionSampleBtn.setOnClickListener {
+            navigateToActivity(PermissionsActivity::class.java)
         }
     }
 

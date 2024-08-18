@@ -4,6 +4,7 @@
     package="com.opensource.samples">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.samples"
         tools:targetApi="31">
+        <activity
+            android:name=".activities.permissions.PermissionsActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.sqlite.ViewSQLiteDataActivity"
             android:exported="false"
