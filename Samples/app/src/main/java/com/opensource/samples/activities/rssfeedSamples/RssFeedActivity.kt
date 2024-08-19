@@ -1,12 +1,12 @@
-package com.opensource.samples.activities.rssfeed
+package com.opensource.samples.activities.rssfeedSamples
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.opensource.samples.R
-import com.opensource.samples.activities.rssfeed.helpers.RssFeedAdapter
-import com.opensource.samples.activities.rssfeed.helpers.RssFeedHandler.getRssFeed
+import com.opensource.samples.activities.rssfeedSamples.helpers.RssFeedAdapter
+import com.opensource.samples.activities.rssfeedSamples.helpers.RssFeedHandler.getRssFeed
 
 class RssFeedActivity : AppCompatActivity() {
 

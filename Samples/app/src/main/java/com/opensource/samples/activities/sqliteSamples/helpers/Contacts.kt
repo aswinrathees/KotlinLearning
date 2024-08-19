@@ -1,4 +1,4 @@
-package com.opensource.samples.activities.sqlite.helpers
+package com.opensource.samples.activities.sqliteSamples.helpers
 
 import android.content.ContentValues
 import android.content.Context

@@ -1,15 +1,12 @@
-package com.opensource.samples.activities.sqlite
+package com.opensource.samples.activities.sqliteSamples
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import com.opensource.samples.R
-import com.opensource.samples.activities.sqlite.helpers.Contacts
+import com.opensource.samples.activities.sqliteSamples.helpers.Contacts
 import com.opensource.samples.databinding.ActivitySqliteBinding
 
 class SQLiteActivity : AppCompatActivity() {

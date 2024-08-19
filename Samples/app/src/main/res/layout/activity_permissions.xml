@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".activities.permissions.PermissionsActivity">
+        tools:context=".activities.permissionSamples.PermissionsActivity">
 
         <Button
             android:id="@+id/btn_permissions"

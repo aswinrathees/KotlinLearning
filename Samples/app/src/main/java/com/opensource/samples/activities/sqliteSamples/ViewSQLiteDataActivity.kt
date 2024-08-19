@@ -1,11 +1,11 @@
-package com.opensource.samples.activities.sqlite
+package com.opensource.samples.activities.sqliteSamples
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.opensource.samples.R
-import com.opensource.samples.activities.sqlite.helpers.Contacts
+import com.opensource.samples.activities.sqliteSamples.helpers.Contacts
 import com.opensource.samples.databinding.ActivityViewSqliteDataBinding
 
 class ViewSQLiteDataActivity : AppCompatActivity() {

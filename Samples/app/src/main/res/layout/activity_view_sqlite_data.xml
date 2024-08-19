@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".activities.sqlite.ViewSQLiteDataActivity">
+        tools:context=".activities.sqliteSamples.ViewSQLiteDataActivity">
 
         <TextView
             android:id="@+id/tv_view_sqlite_data"

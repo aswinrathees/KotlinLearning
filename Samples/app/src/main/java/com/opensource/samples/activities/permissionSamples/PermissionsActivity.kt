@@ -1,16 +1,12 @@
-package com.opensource.samples.activities.permissions
+package com.opensource.samples.activities.permissionSamples
 
-import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import com.opensource.samples.R
 import com.opensource.samples.databinding.ActivityPermissionsBinding

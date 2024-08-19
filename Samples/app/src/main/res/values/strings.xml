@@ -91,4 +91,6 @@
     <string name="permissions">Permissions</string>
     <string name="checks_contacts_permission">Checks Contacts Permission</string>
     <string name="rss_feed">RSS Feed</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="enter_message">Enter message</string>
 </resources>

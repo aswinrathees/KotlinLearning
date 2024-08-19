@@ -1,4 +1,4 @@
-package com.opensource.samples.activities.rssfeed.helpers
+package com.opensource.samples.activities.rssfeedSamples.helpers
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
