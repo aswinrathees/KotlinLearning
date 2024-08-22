@@ -13,6 +13,7 @@ import com.opensource.samples.activities.fragmentSamples.fragments.contacts.Cont
 import com.opensource.samples.activities.intentSamples.IntentActivity
 import com.opensource.samples.activities.permissionSamples.PermissionsActivity
 import com.opensource.samples.activities.rssfeedSamples.RssFeedActivity
+import com.opensource.samples.activities.serviceSamples.StreamMusicActivity
 import com.opensource.samples.activities.smsSamples.SMSActivity
 import com.opensource.samples.activities.sqliteSamples.SQLiteActivity
 import com.opensource.samples.databinding.ActivityMainBinding
@@ -68,6 +69,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.showSendSMSSampleBtn.setOnClickListener {
             navigateToActivity(SMSActivity::class.java)
+        }
+
+        binding.showMusicServiceSampleBtn.setOnClickListener {
+            navigateToActivity(StreamMusicActivity::class.java)
         }
     }
 

@@ -93,4 +93,6 @@
     <string name="rss_feed">RSS Feed</string>
     <string name="send_sms">Send SMS</string>
     <string name="enter_message">Enter message</string>
+    <string name="music_playback_handling">Music Playback Handling</string>
+    <string name="start_music_service">Start Music Service</string>
 </resources>
