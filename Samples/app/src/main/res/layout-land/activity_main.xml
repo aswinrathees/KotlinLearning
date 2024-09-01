@@ -75,6 +75,12 @@
             android:layout_height="wrap_content"
             android:text="@string/start_music_service" />
 
+        <Button
+            android:id="@+id/showAppWidgetsSampleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_widgets" />
+
     </LinearLayout>
 
 </layout>

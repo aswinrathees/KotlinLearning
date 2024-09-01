@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.opensource.samples.activities.appWidgets.AppWidgetsActivity
 import com.opensource.samples.activities.customizationSamples.BasicCustomizationActivity
 import com.opensource.samples.activities.customizationSamples.CustomActionBarActivity
 import com.opensource.samples.activities.customizationSamples.CustomListViewActivity
@@ -73,6 +74,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.showMusicServiceSampleBtn.setOnClickListener {
             navigateToActivity(StreamMusicActivity::class.java)
+        }
+
+        binding.showAppWidgetsSampleBtn.setOnClickListener {
+            navigateToActivity(AppWidgetsActivity::class.java)
         }
     }
 
