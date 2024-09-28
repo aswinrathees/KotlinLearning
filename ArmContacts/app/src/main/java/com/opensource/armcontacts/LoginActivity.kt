@@ -14,6 +14,7 @@ import com.backendless.async.callback.AsyncCallback
 import com.backendless.exceptions.BackendlessFault
 import com.backendless.persistence.local.UserIdStorageFactory
 import com.opensource.armcontacts.databinding.ActivityLoginBinding
+import com.opensource.armcontacts.utils.ApplicationUser
 import com.opensource.armcontacts.utils.BaseActivity
 
 class LoginActivity : BaseActivity() {
@@ -47,6 +48,9 @@ class LoginActivity : BaseActivity() {
                     password,
                     object : AsyncCallback<BackendlessUser> {
                         override fun handleResponse(response: BackendlessUser?) {
+                            response?.let {
+                                ApplicationUser.user = it
+                            }
                             Toast.makeText(baseContext, "Login Successful", Toast.LENGTH_SHORT)
                                 .show()
                             navigateToActivity(HomeActivity::class.java)
@@ -89,6 +93,9 @@ class LoginActivity : BaseActivity() {
                     val userObjectId = UserIdStorageFactory.instance().storage.get()
                     Backendless.Data.of(BackendlessUser::class.java).findById(userObjectId, object: AsyncCallback<BackendlessUser> {
                         override fun handleResponse(response: BackendlessUser?) {
+                            response?.let {
+                                ApplicationUser.user = it
+                            }
                             navigateToActivity(HomeActivity::class.java)
                         }
 

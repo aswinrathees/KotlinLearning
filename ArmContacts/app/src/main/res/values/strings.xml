@@ -10,4 +10,10 @@
     <string name="enter_your_last_name">Enter Your Last Name</string>
     <string name="please_re_enter_password">Please Re-Enter Password</string>
     <string name="enter_your_email">Enter Your Email</string>
+    <string name="list_contacts">List Contacts</string>
+    <string name="create_contact">Create Contact</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="create_new_contact">Create New Contact</string>
+    <string name="contact_email">Contact Email</string>
+    <string name="contact_number">Contact Number</string>
 </resources>

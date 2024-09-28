@@ -12,6 +12,7 @@ import com.backendless.BackendlessUser
 import com.backendless.async.callback.AsyncCallback
 import com.backendless.exceptions.BackendlessFault
 import com.opensource.armcontacts.databinding.ActivityRegisterBinding
+import com.opensource.armcontacts.utils.ApplicationUser
 import com.opensource.armcontacts.utils.BaseActivity
 import com.opensource.armcontacts.utils.Person
 
@@ -53,6 +54,7 @@ class RegisterActivity : BaseActivity() {
 
                     Backendless.UserService.register(backendlessUser, object: AsyncCallback<BackendlessUser> {
                         override fun handleResponse(response: BackendlessUser?) {
+                            ApplicationUser.user.email = response?.email.toString()
                             Toast.makeText(baseContext, "Successfully registered for: ${response?.email}", Toast.LENGTH_SHORT).show()
                             finish()
                         }
