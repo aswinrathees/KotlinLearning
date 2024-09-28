@@ -44,7 +44,6 @@ class NewContactActivity : AppCompatActivity() {
                     }
 
                     override fun handleFault(fault: BackendlessFault?) {
-                        Log.e("XX", "handleFault: ${fault?.message}")
                         Toast.makeText(baseContext, "Error in saving contact : ${fault?.message}", Toast.LENGTH_SHORT).show()
                     }
 
