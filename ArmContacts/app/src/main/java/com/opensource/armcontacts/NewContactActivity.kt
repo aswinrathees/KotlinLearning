@@ -34,13 +34,6 @@ class NewContactActivity : AppCompatActivity() {
             if (name.isNotEmpty() && phone.isNotEmpty() && email.isNotEmpty()) {
                 val contact = Contact(name, phone, email, ApplicationUser.user.email ?: "")
 
-                /*val backendlessUser = BackendlessUser()
-                backendlessUser.email = contact.email
-                backendlessUser.setProperty("name", contact.name)
-                backendlessUser.setProperty("phone", contact.phone)
-                backendlessUser.setProperty("email", contact.email)
-                backendlessUser.setProperty("appUserEmail", contact.appUserEmail)*/
-
                 Backendless.Persistence.save(contact, object: AsyncCallback<Contact> {
                     override fun handleResponse(response: Contact?) {
                         Toast.makeText(baseContext, "Contact saved", Toast.LENGTH_SHORT).show()
