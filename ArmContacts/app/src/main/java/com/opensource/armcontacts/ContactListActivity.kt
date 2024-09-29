@@ -42,8 +42,8 @@ class ContactListActivity : AppCompatActivity(), ItemSelected {
 
         binding.rvContacts.layoutManager = LinearLayoutManager(this@ContactListActivity)
 
-        Backendless.Persistence.of(Contact::class.java).find(queryBuilder, object : AsyncCallback<List<Contact>> {
-            override fun handleResponse(response: List<Contact>?) {
+        Backendless.Persistence.of(Contact::class.java).find(queryBuilder, object : AsyncCallback<MutableList<Contact>> {
+            override fun handleResponse(response: MutableList<Contact>?) {
                 response?.let {
                     contactList = it
                     ApplicationUser.contactList = it
