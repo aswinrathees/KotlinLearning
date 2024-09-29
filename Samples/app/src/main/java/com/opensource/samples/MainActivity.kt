@@ -79,6 +79,10 @@ class MainActivity : AppCompatActivity() {
         binding.showAppWidgetsSampleBtn.setOnClickListener {
             navigateToActivity(AppWidgetsActivity::class.java)
         }
+
+        binding.showGoogleMapsSampleBtn.setOnClickListener {
+            navigateToActivity(MapsActivity::class.java)
+        }
     }
 
     private fun navigateToActivity(clazz: Class<*>) {
