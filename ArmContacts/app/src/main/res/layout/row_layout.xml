@@ -4,7 +4,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:background="@color/design_default_color_primary">
 
         <TextView
@@ -14,7 +15,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +26,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_contact_name"
             app:layout_constraintTop_toTopOf="parent" />
@@ -37,6 +39,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_contact_name"
             app:layout_constraintTop_toBottomOf="@+id/tv_contact_phone" />

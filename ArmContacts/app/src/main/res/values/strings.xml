@@ -16,4 +16,10 @@
     <string name="create_new_contact">Create New Contact</string>
     <string name="contact_email">Contact Email</string>
     <string name="contact_number">Contact Number</string>
+    <string name="contacts">Contacts</string>
+    <string name="phone_call">Phone Call</string>
+    <string name="send_mail">Send Mail</string>
+    <string name="edit_detail">Edit Detail</string>
+    <string name="delete_contact">Delete Contact</string>
+    <string name="edit_contact">Edit Contact</string>
 </resources>

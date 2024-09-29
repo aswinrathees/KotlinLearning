@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ArmContacts">
         <activity
+            android:name=".ContactInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewContactActivity"
             android:exported="false" />
         <activity

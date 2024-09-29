@@ -9,13 +9,22 @@ import com.opensource.armcontacts.databinding.RowLayoutBinding
 class ContactsAdapter(private val contacts: List<Contact>):
     RecyclerView.Adapter<ContactsAdapter.ContactViewHolder>() {
 
+    private lateinit var itemSelected: ItemSelected
+
     inner class ContactViewHolder(binding: RowLayoutBinding): RecyclerView.ViewHolder(binding.root) {
         val contactName: TextView = binding.tvContactName
         val contactNumber: TextView = binding.tvContactPhone
         val contactEmail: TextView = binding.tvContactEmail
+
+        init {
+            itemView.setOnClickListener {
+                itemSelected.onItemSelected(it.id)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
+        itemSelected = parent.context as ItemSelected
         return ContactViewHolder(RowLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
@@ -30,4 +39,8 @@ class ContactsAdapter(private val contacts: List<Contact>):
         holder.contactNumber.text = contacts[position].phone
         holder.contactEmail.text = contacts[position].email
     }
+}
+
+internal interface ItemSelected {
+    fun onItemSelected(index: Int)
 }

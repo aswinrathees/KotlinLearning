@@ -1,5 +1,6 @@
 package com.opensource.armcontacts
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -18,8 +19,9 @@ import com.opensource.armcontacts.databinding.ActivityContactListBinding
 import com.opensource.armcontacts.utils.ApplicationUser
 import com.opensource.armcontacts.utils.Contact
 import com.opensource.armcontacts.utils.ContactsAdapter
+import com.opensource.armcontacts.utils.ItemSelected
 
-class ContactListActivity : AppCompatActivity() {
+class ContactListActivity : AppCompatActivity(), ItemSelected {
 
     private lateinit var binding: ActivityContactListBinding
     private lateinit var contactList: List<Contact>
@@ -28,7 +30,6 @@ class ContactListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_contact_list)
-
         fetchData()
     }
 
@@ -45,7 +46,7 @@ class ContactListActivity : AppCompatActivity() {
             override fun handleResponse(response: List<Contact>?) {
                 response?.let {
                     contactList = it
-                    Log.e("XX", "contactList : ${contactList}")
+                    ApplicationUser.contactList = it
                     val adapter = ContactsAdapter(this@ContactListActivity.contactList)
                     binding.rvContacts.adapter = adapter
                 }
@@ -55,5 +56,11 @@ class ContactListActivity : AppCompatActivity() {
                 Toast.makeText(baseContext, "Error: " + fault?.message, Toast.LENGTH_LONG).show()
             }
         })
+    }
+
+    override fun onItemSelected(index: Int) {
+        val intent = Intent(this, ContactInfoActivity::class.java)
+        intent.putExtra("contactId", index)
+        startActivity(intent)
     }
 }

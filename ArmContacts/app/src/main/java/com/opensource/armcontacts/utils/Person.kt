@@ -11,4 +11,5 @@ data class Person(
 
 object ApplicationUser {
     var user: BackendlessUser = BackendlessUser()
+    lateinit var contactList: List<Contact>
 }
