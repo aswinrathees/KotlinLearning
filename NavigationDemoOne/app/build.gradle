@@ -5,12 +5,14 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    namespace 'com.opensource.navigationdemoone'
+
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.opensource.navigationdemoone"
-        minSdk 31
-        targetSdk 32
+        minSdk 30
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -24,11 +26,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_10
+        targetCompatibility JavaVersion.VERSION_1_10
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '10'
     }
     buildFeatures {
         dataBinding = true
