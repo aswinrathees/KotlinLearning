@@ -1,5 +1,6 @@
 package com.opensource.recyclerviewdemo
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import com.opensource.recyclerviewdemo.adapter.MyRecyclerViewAdapter
 import com.opensource.recyclerviewdemo.helpers.Fruits
 
 class MainActivity : AppCompatActivity() {
+
     private val fruitsList = listOf(
         Fruits("Apple", 120),
         Fruits("Mango", 90),
@@ -24,6 +26,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        showFruitsActivity()
+        // handleRecyclerView()
+    }
+
+    private fun showFruitsActivity() {
+        val intent = Intent(this, FruitsActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun handleRecyclerView() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.setBackgroundColor(Color.GRAY)
         recyclerView.layoutManager = LinearLayoutManager(this)
