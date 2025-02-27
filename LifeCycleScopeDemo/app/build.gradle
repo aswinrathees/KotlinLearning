@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 35
+    namespace 'com.opensource.lifecyclescopedemo'
 
     defaultConfig {
         applicationId "com.opensource.lifecyclescopedemo"
         minSdk 31
-        targetSdk 32
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
@@ -23,11 +24,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_10
+        targetCompatibility JavaVersion.VERSION_1_10
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '10'
     }
 }
 
