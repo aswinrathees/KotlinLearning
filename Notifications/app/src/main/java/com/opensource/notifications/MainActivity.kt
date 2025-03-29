@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     private fun displayNotification() {
         val notificationId = 1
         val tapResultIntent = Intent(this, NotificationActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK
         }
         val pendingIntent: PendingIntent = PendingIntent.getActivity(
             this,
@@ -70,18 +70,18 @@ class MainActivity : AppCompatActivity() {
             this,
             0,
             settingsResultIntent,
-            PendingIntent.FLAG_MUTABLE
+            PendingIntent.FLAG_IMMUTABLE
         )
         val settings: NotificationCompat.Action =
             NotificationCompat.Action.Builder(0, "Settings", settingsIntent).build()
 
         val notification = NotificationCompat.Builder(this, notificationChannelId)
-            .setContentTitle("Notification Title")
-            .setContentText("Notification Demo")
+            .setContentTitle("Demo")
+            .setContentText("This is a Demo Notification")
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setAutoCancel(true)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            //.setContentIntent(pendingIntent)
+            .setContentIntent(pendingIntent)
             .addAction(action)
             .addAction(settings)
             .addAction(replyAction)
@@ -90,14 +90,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun createNotificationChannel(id: String, name: String, channelDescription: String) {
-//        Condition check if your minimum SDK version is less than 5
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-        val importance = NotificationManager.IMPORTANCE_HIGH
+        // Supported from Android O and above
+        val importance = NotificationManager.IMPORTANCE_DEFAULT
         val channel = NotificationChannel(id, name, importance).apply {
             description = channelDescription
         }
         notificationManager?.createNotificationChannel(channel)
-//            channel.description = channelDescription
-//        }
+        //channel.description = channelDescription
     }
 }
