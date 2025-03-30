@@ -10,8 +10,11 @@ import androidx.core.app.NotificationCompat
 
 class NotificationActivity : AppCompatActivity() {
     private lateinit var textView: TextView
+    private lateinit var activity: NotificationActivity
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        activity = this
         setContentView(R.layout.activity_notification)
         textView = findViewById(R.id.textView)
         receiveInput()
@@ -19,16 +22,14 @@ class NotificationActivity : AppCompatActivity() {
 
     private fun receiveInput() {
         val KEY_REPLY = "key_reply"
-        val intent = this.intent
-        val remoteInput = RemoteInput.getResultsFromIntent(intent)
-        if(remoteInput!=null) {
-            val inputString = remoteInput.getCharSequence(KEY_REPLY).toString()
+        RemoteInput.getResultsFromIntent(this.intent).apply {
+            val inputString = getCharSequence(KEY_REPLY).toString()
             textView.text = inputString
 
-            val notificationChannelId: String = "com.opensource.notifications"
+            val notificationChannelId = "com.opensource.notifications.channel"
             val notificationId = 1
 
-            val repliedNotification = NotificationCompat.Builder(this,notificationChannelId)
+            val repliedNotification = NotificationCompat.Builder(activity,notificationChannelId)
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setContentText("Reply received")
                 .build()

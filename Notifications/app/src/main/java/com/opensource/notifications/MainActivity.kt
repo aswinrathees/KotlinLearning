@@ -9,9 +9,10 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
+import androidx.core.app.RemoteInput
 
 class MainActivity : AppCompatActivity() {
-    private val notificationChannelId: String = "com.opensource.notifications"
+    private val notificationChannelId: String = "com.opensource.notifications.channel"
     private var notificationManager: NotificationManager? = null
     private var KEY_REPLY = "key_reply"
 
@@ -22,9 +23,10 @@ class MainActivity : AppCompatActivity() {
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         createNotificationChannel(notificationChannelId, "Notification", "Notification Demo")
-        val notificationButton = findViewById<Button>(R.id.button)
-        notificationButton.setOnClickListener {
-            displayNotification()
+        findViewById<Button>(R.id.button).apply {
+            setOnClickListener {
+                displayNotification()
+            }
         }
     }
 
@@ -37,12 +39,12 @@ class MainActivity : AppCompatActivity() {
             this,
             0,
             tapResultIntent,
-            PendingIntent.FLAG_MUTABLE
+            PendingIntent.FLAG_UPDATE_CURRENT
         )
 
         //Reply action
-        val remoteInput: androidx.core.app.RemoteInput =
-            androidx.core.app.RemoteInput.Builder(KEY_REPLY).run {
+        val remoteInput: RemoteInput =
+            RemoteInput.Builder(KEY_REPLY).run {
                 setLabel("Enter your reply")
                 build()
             }
@@ -95,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         val channel = NotificationChannel(id, name, importance).apply {
             description = channelDescription
         }
-        notificationManager?.createNotificationChannel(channel)
+        notificationManager?.let { it.createNotificationChannel(channel) }
         //channel.description = channelDescription
     }
 }
