@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         val repository = SubscriberRepository(dao)
         val factory = SubscriberViewModelFactory(repository)
         subscriberViewModel = ViewModelProvider(this, factory).get(SubscriberViewModel::class.java)
+        subscriberViewModel.message.observe(this) {
+            Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
+        }
+
         binding.subscriberViewModel = subscriberViewModel
         binding.lifecycleOwner = this
         initRecyclerView()

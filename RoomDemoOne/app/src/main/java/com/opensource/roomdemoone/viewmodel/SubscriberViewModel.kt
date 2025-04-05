@@ -1,5 +1,6 @@
 package com.opensource.roomdemoone.viewmodel
 
+import android.util.Patterns
 import androidx.databinding.Observable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,11 +12,12 @@ import kotlinx.coroutines.launch
 
 class SubscriberViewModel(private val subscriberRepository: SubscriberRepository) : ViewModel(),
     Observable {
-    var subscribers = subscriberRepository.subscribers
 
     private var isUpdateOrDelete = false
     private lateinit var subscriberToUpdateOrDelete: Subscriber
 
+    var subscribers = subscriberRepository.subscribers
+    var message = MutableLiveData<String>()
     var inputName = MutableLiveData<String?>()
     var inputEmail = MutableLiveData<String?>()
 
@@ -28,6 +30,10 @@ class SubscriberViewModel(private val subscriberRepository: SubscriberRepository
     }
 
     fun saveOrUpdate() {
+        if (inputName.value == null || inputEmail.value == null || !Patterns.EMAIL_ADDRESS.matcher(inputEmail.value!!).matches()) {
+            message.postValue("Invalid or no input")
+            return
+        }
         if (isUpdateOrDelete) {
             subscriberToUpdateOrDelete.name = inputName.value!!
             subscriberToUpdateOrDelete.email = inputEmail.value!!
