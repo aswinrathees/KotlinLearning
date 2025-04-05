@@ -30,7 +30,7 @@ class SubscriberViewModel(private val subscriberRepository: SubscriberRepository
     }
 
     fun saveOrUpdate() {
-        if (inputName.value == null || inputEmail.value == null || !Patterns.EMAIL_ADDRESS.matcher(inputEmail.value!!).matches()) {
+        if (inputName.value == null || inputEmail.value == null) {
             message.postValue("Invalid or no input")
             return
         }
