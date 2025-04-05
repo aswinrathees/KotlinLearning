@@ -1,11 +1,10 @@
 package com.opensource.roomdemoone
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.opensource.roomdemoone.databinding.ActivityMainBinding
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun displaySubscriberList() {
-        subscriberViewModel.subscribers.observe(this, Observer {
+        subscriberViewModel.subscribers.observe(this) {
             Log.i("DisplaySubscriberList", it.toString())
             binding.recyclerView.adapter =
                 SubscriberRecyclerViewAdapter(it) { selectedItem: Subscriber ->
@@ -42,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                         selectedItem
                     )
                 }
-        })
+        }
     }
 
     private fun listItemClicked(subscriber: Subscriber) {

@@ -3,7 +3,6 @@ package com.opensource.roomdemoone.helpers
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.opensource.roomdemoone.model.Subscriber
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface SubscriberDao {

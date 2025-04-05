@@ -11,8 +11,11 @@ abstract class SubscriberDatabase : RoomDatabase() {
     abstract val subscriberDao: SubscriberDao
 
     companion object {
+
         @Volatile
         private var INSTANCE: SubscriberDatabase? = null
+
+        @JvmStatic
         fun getInstance(context: Context): SubscriberDatabase {
             synchronized(this) {
                 var instance: SubscriberDatabase? = INSTANCE
