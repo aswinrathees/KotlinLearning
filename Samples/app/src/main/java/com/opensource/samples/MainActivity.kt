@@ -9,6 +9,7 @@ import com.opensource.samples.activities.customizationSamples.BasicCustomization
 import com.opensource.samples.activities.customizationSamples.CustomActionBarActivity
 import com.opensource.samples.activities.customizationSamples.CustomListViewActivity
 import com.opensource.samples.activities.customizationSamples.helpers.ViewUtilities
+import com.opensource.samples.activities.dagger2.Dagger2Activity
 import com.opensource.samples.activities.fragmentSamples.FragmentActivity
 import com.opensource.samples.activities.fragmentSamples.fragments.contacts.ContactActivity
 import com.opensource.samples.activities.intentSamples.IntentActivity
@@ -82,6 +83,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.showGoogleMapsSampleBtn.setOnClickListener {
             navigateToActivity(MapsActivity::class.java)
+        }
+
+        binding.showDagger2SampleBtn.setOnClickListener {
+            navigateToActivity(
+                Dagger2Activity::class.java)
         }
     }
 

@@ -23,6 +23,10 @@
         android:theme="@style/Theme.samples"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".activities.dagger2.Dagger2Activity"
+            android:exported="false"
+            android:theme="@style/Theme.samples" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -31,8 +35,8 @@
         <activity
             android:name=".MapsActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
 
         <receiver
             android:name=".activities.appWidgets.NewAppWidget"

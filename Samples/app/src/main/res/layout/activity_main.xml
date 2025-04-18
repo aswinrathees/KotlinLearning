@@ -1,92 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:id="@+id/layoutPortrait">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/showIntentsSampleBtn"
+        <LinearLayout
+            android:id="@+id/layoutPortrait"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/intentsText" />
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/showAdaptiveViewFragmentsSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/fragments_text" />
+            <Button
+                android:id="@+id/showIntentsSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/intentsText" />
 
-        <Button
-            android:id="@+id/showContactsFragmentsSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/contacts_with_fragments" />
+            <Button
+                android:id="@+id/showAdaptiveViewFragmentsSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fragments_text" />
 
-        <Button
-            android:id="@+id/showCustomizationsSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/basic_customizations" />
+            <Button
+                android:id="@+id/showContactsFragmentsSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contacts_with_fragments" />
 
-        <Button
-            android:id="@+id/showCustomListViewSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/custom_list_view" />
+            <Button
+                android:id="@+id/showCustomizationsSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/basic_customizations" />
 
-        <Button
-            android:id="@+id/showCustomActionBarSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/custom_action_bar" />
+            <Button
+                android:id="@+id/showCustomListViewSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_list_view" />
 
-        <Button
-            android:id="@+id/showSQLiteSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sqlite" />
+            <Button
+                android:id="@+id/showCustomActionBarSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_action_bar" />
 
-        <Button
-            android:id="@+id/showPermissionSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/permissions" />
+            <Button
+                android:id="@+id/showSQLiteSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sqlite" />
 
-        <Button
-            android:id="@+id/showRssFeedSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/rss_feed" />
+            <Button
+                android:id="@+id/showPermissionSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/permissions" />
 
-        <Button
-            android:id="@+id/showSendSMSSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/send_sms" />
+            <Button
+                android:id="@+id/showRssFeedSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rss_feed" />
 
-        <Button
-            android:id="@+id/showMusicServiceSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/start_music_service" />
+            <Button
+                android:id="@+id/showSendSMSSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/send_sms" />
 
-        <Button
-            android:id="@+id/showAppWidgetsSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/app_widgets" />
+            <Button
+                android:id="@+id/showMusicServiceSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_music_service" />
 
-        <Button
-            android:id="@+id/showGoogleMapsSampleBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/google_maps" />
+            <Button
+                android:id="@+id/showAppWidgetsSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_widgets" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/showGoogleMapsSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/google_maps" />
+
+            <Button
+                android:id="@+id/showDagger2SampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dagger_2" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </layout>
