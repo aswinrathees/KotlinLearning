@@ -18,7 +18,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         bindingUtil = DataBindingUtil.setContentView(this, R.layout.activity_home)
-        setContentView(bindingUtil.root)
         initViews()
     }
 

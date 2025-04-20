@@ -14,6 +14,5 @@ class ArtistActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         bindingUtil = DataBindingUtil.setContentView(this, R.layout.activity_artist)
-        setContentView(bindingUtil.root)
     }
 }

@@ -13,6 +13,5 @@ class TVShowActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         bindingUtil = DataBindingUtil.setContentView(this, R.layout.activity_tv_show)
-        setContentView(bindingUtil.root)
     }
 }
