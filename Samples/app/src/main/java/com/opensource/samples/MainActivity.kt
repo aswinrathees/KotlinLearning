@@ -18,6 +18,7 @@ import com.opensource.samples.activities.rssfeedSamples.RssFeedActivity
 import com.opensource.samples.activities.serviceSamples.StreamMusicActivity
 import com.opensource.samples.activities.smsSamples.SMSActivity
 import com.opensource.samples.activities.sqliteSamples.SQLiteActivity
+import com.opensource.samples.activities.unitTests.UnitTestsActivity
 import com.opensource.samples.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -86,8 +87,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.showDagger2SampleBtn.setOnClickListener {
-            navigateToActivity(
-                Dagger2Activity::class.java)
+            navigateToActivity(Dagger2Activity::class.java)
+        }
+
+        binding.showUnitTestsBtn.setOnClickListener {
+            navigateToActivity(UnitTestsActivity::class.java)
         }
     }
 

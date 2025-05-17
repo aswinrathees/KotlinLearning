@@ -113,4 +113,9 @@
     <string name="terrain_map">Terrain Map</string>
     <string name="no_map">No Map</string>
     <string name="dagger_2">Dagger 2</string>
+    <string name="circle_radius">Circle Radius</string>
+    <string name="calculate">Calculate</string>
+    <string name="circumference">Circumference</string>
+    <string name="area">Area</string>
+    <string name="unit_tests">Unit Tests</string>
 </resources>

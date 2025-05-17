@@ -97,6 +97,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/dagger_2" />
 
+            <Button
+                android:id="@+id/showUnitTestsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_tests" />
+
         </LinearLayout>
 
     </ScrollView>
