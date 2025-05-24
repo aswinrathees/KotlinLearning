@@ -19,6 +19,7 @@ import com.opensource.samples.activities.serviceSamples.StreamMusicActivity
 import com.opensource.samples.activities.smsSamples.SMSActivity
 import com.opensource.samples.activities.sqliteSamples.SQLiteActivity
 import com.opensource.samples.activities.unitTests.UnitTestsActivity
+import com.opensource.samples.activities.viewBinding.ViewBindingActivity
 import com.opensource.samples.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -92,6 +93,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.showUnitTestsBtn.setOnClickListener {
             navigateToActivity(UnitTestsActivity::class.java)
+        }
+
+        binding.showViewBindingBtn.setOnClickListener {
+            navigateToActivity(ViewBindingActivity::class.java)
         }
     }
 

@@ -118,4 +118,6 @@
     <string name="circumference">Circumference</string>
     <string name="area">Area</string>
     <string name="unit_tests">Unit Tests</string>
+    <string name="view_binding">View Binding</string>
+    <string name="ok">OK</string>
 </resources>
