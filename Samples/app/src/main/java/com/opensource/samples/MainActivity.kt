@@ -18,6 +18,7 @@ import com.opensource.samples.activities.rssfeedSamples.RssFeedActivity
 import com.opensource.samples.activities.serviceSamples.StreamMusicActivity
 import com.opensource.samples.activities.smsSamples.SMSActivity
 import com.opensource.samples.activities.sqliteSamples.SQLiteActivity
+import com.opensource.samples.activities.stopwatch.StopWatchActivity
 import com.opensource.samples.activities.unitTests.UnitTestsActivity
 import com.opensource.samples.activities.viewBinding.ViewBindingActivity
 import com.opensource.samples.databinding.ActivityMainBinding
@@ -34,6 +35,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        binding.showViewBindingBtn.setOnClickListener {
+            navigateToActivity(ViewBindingActivity::class.java)
+        }
+
         binding.showIntentsSampleBtn.setOnClickListener {
             navigateToActivity(IntentActivity::class.java)
         }
@@ -87,16 +92,16 @@ class MainActivity : AppCompatActivity() {
             navigateToActivity(MapsActivity::class.java)
         }
 
+        binding.showStopWatchSampleBtn.setOnClickListener {
+            navigateToActivity(StopWatchActivity::class.java)
+        }
+
         binding.showDagger2SampleBtn.setOnClickListener {
             navigateToActivity(Dagger2Activity::class.java)
         }
 
         binding.showUnitTestsBtn.setOnClickListener {
             navigateToActivity(UnitTestsActivity::class.java)
-        }
-
-        binding.showViewBindingBtn.setOnClickListener {
-            navigateToActivity(ViewBindingActivity::class.java)
         }
     }
 

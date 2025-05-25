@@ -98,6 +98,12 @@
                 android:text="@string/google_maps" />
 
             <Button
+                android:id="@+id/showStopWatchSampleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/stop_watch" />
+
+            <Button
                 android:id="@+id/showDagger2SampleBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

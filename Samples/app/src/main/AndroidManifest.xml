@@ -23,6 +23,7 @@
         android:theme="@style/Theme.samples"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
         <activity
             android:name=".activities.viewBinding.ViewBindingActivity"
             android:exported="false" />
@@ -71,6 +72,14 @@
             android:name=".activities.serviceSamples.utils.StreamMusicService"
             android:enabled="true"
             android:exported="true" />
+
+        <activity
+            android:name=".activities.stopwatch.StopWatchActivity"
+            android:exported="false" />
+        <service
+            android:name=".activities.stopwatch.StopWatchService"
+            android:enabled="true"
+            android:exported="false" />
 
         <activity
             android:name=".activities.serviceSamples.StreamMusicActivity"
