@@ -1,5 +1,6 @@
 package com.opensource.armmovies.presentation.di
 
+import android.util.Log
 import com.opensource.armmovies.data.api.ApiService
 import dagger.Module
 import dagger.Provides

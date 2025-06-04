@@ -5,9 +5,9 @@ import com.opensource.armmovies.data.model.tvshow.TVShow
 import com.opensource.armmovies.domain.repoInterfaces.TVShowRepository
 
 class TVShowRepositoryImpl(
-    private val tvShowRemoteDataStore: com.opensource.armmovies.data.repository.tvshow.TVShowRemoteDataStore,
-    private val tvShowLocalDataStore: com.opensource.armmovies.data.repository.tvshow.TVShowLocalDataSource,
-    private val tvShowCacheDataSource: com.opensource.armmovies.data.repository.tvshow.TVShowCacheDataSource
+    private val tvShowRemoteDataStore: TVShowRemoteDataStore,
+    private val tvShowLocalDataStore: TVShowLocalDataSource,
+    private val tvShowCacheDataSource: TVShowCacheDataSource
 ): TVShowRepository {
 
     override suspend fun getTVShows(): List<TVShow>? = getTVShowsFromCache()
@@ -31,7 +31,6 @@ class TVShowRepositoryImpl(
         } catch (exception: Exception) {
             Log.e("MyTAG", "Exception occured: ${exception.localizedMessage}")
         }
-
         return tvShowList
     }
 
@@ -45,7 +44,7 @@ class TVShowRepositoryImpl(
                 true -> return tvShowList
                 false -> {
                     tvShowList = getTVShowsFromAPI()
-                    tvShowCacheDataSource.saveTVShowsToCache(tvShowList)
+                    tvShowLocalDataStore.saveTVShowToDB(tvShowList)
                 }
             }
         } catch (exception: Exception) {

@@ -8,29 +8,29 @@ import com.google.gson.annotations.SerializedName
 data class TVShow(
     @SerializedName("adult")
     val adult: Boolean,
-    @SerializedName("backdrop_path")
+    @SerializedName("backdropPath")
     val backdropPath: String,
     @PrimaryKey
     @SerializedName("id")
     val id: Int,
-    @SerializedName("original_language")
+    @SerializedName("originalLanguage")
     val originalLanguage: String,
-    @SerializedName("original_title")
+    @SerializedName("originalTitle")
     val originalTitle: String,
     @SerializedName("overview")
     val overview: String,
     @SerializedName("popularity")
     val popularity: Double,
-    @SerializedName("poster_path")
+    @SerializedName("posterPath")
     val posterPath: String,
-    @SerializedName("release_date")
+    @SerializedName("releaseDate")
     val releaseDate: String,
     @SerializedName("title")
     val title: String,
     @SerializedName("video")
     val video: Boolean,
-    @SerializedName("vote_average")
+    @SerializedName("voteAverage")
     val voteAverage: Double,
-    @SerializedName("vote_count")
+    @SerializedName("voteCount")
     val voteCount: Int
 )
