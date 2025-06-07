@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">ArmMovies</string>
-    <string name="movies">Movies</string>
-    <string name="tv_shows">TV Shows</string>
-    <string name="artists">Artists</string>
-    <string name="movieimage">movieImage</string>
-</resources>
